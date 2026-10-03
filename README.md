@@ -156,7 +156,7 @@ I'm always interested in learning, collaborating, and connecting with people who
 
 - **GitHub:** [rd-builds](https://github.com/rd-builds)
 - **Email:** [riyaduggal09@gmail.com](mailto:riyaduggal09@gmail.com)
-- **LinkedIn:** Add your LinkedIn profile URL here.
+- **LinkedIn:** [Add your LinkedIn profile URL here](https://www.linkedin.com/in/riyaduggal/).
 
 Feel free to explore the repository, check out my projects, and connect with me!
 
