@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="750" viewBox="0 0 600 750" fill="none">
+  <rect width="600" height="750" fill="#F7F6F3"/>
+  <path d="M0 0 H600 V180 C560 150 520 140 480 145 C430 152 410 175 370 172 C330 168 300 145 260 148 C220 151 200 172 160 168 C130 165 110 150 60 160 C35 165 15 170 0 165 Z" fill="#EFECE7"/>
+  <rect x="140" y="210" width="320" height="410" rx="24" stroke="#D9D6CF" stroke-width="3" stroke-dasharray="9 9" fill="none"/>
+  <circle cx="300" cy="330" r="46" stroke="#CFCBC3" stroke-width="4" fill="none"/>
+  <path d="M205 455 c0 -58 42 -90 95 -90 s95 32 95 90" stroke="#CFCBC3" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <text x="300" y="520" font-family="monospace" font-size="22" font-weight="bold" fill="#B8B4AC" text-anchor="middle" letter-spacing="4">PROFILE</text>
+  <text x="300" y="552" font-family="monospace" font-size="15" fill="#C6C2BA" text-anchor="middle" letter-spacing="2">photo placeholder</text>
+  <text x="300" y="690" font-family="monospace" font-size="12" fill="#D0CCC4" text-anchor="middle" letter-spacing="3">REPLACE ME</text>
+</svg>

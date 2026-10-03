@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ─────────────────────────────────────────────────── */
+/* Shared grid tokens — the homepage and the light achievement
+   detail pages use the exact same checker/grid geometry.
+   The homepage keeps its original line color; the light detail
+   pages use the warm-ivory line color. */
+:root {
+  --grid-line: rgba(0, 0, 0, 0.045);
+  --grid-size: 64px 64px;
+  --grid-line-light: rgba(23, 23, 23, 0.045);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background-color: #FAF9F6;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-size);
+  background-position: 0 0;
+}
+
+/* Light-mode achievement detail pages: same checker/grid geometry,
+   warm ivory #F6F3EE base, subtle and visible across the whole page. */
+.checker-grid-light {
+  background-color: #F6F3EE;
+  background-image:
+    linear-gradient(to right, var(--grid-line-light) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line-light) 1px, transparent 1px);
+  background-size: var(--grid-size);
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* ─── Selection ────────────────────────────────────────────── */
+::selection {
+  background-color: #E9D5FF;
+  color: #1a1a1a;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF9F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
+
+/* ─── Hide scrollbars for scrollable chip/tab rows ──────────── */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ─── Ticker ───────────────────────────────────────────────── */
+.ticker-track:hover {
+  animation-play-state: paused !important;
+}
+
+/* ─── Tech Marquee ─────────────────────────────────────────── */
+@keyframes tech-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.3333%); }
+}
+.tech-marquee {
+  animation: tech-scroll 45s linear infinite;
+}
+
+/* ─── Global YOU tracker ───────────────────────────────────── */
+.you-tracker-badge {
+  background-color: #1a1a1a;
+  color: #fafaf7;
+  border-color: rgba(250, 250, 247, 0.2);
+}
+.you-tracker[data-dark="0"] .you-tracker-badge {
+  background-color: #fafaf7;
+  color: #1a1a1a;
+  border-color: rgba(26, 26, 26, 0.15);
+}
+
+/* ─── About squiggle — thick, hand-drawn stroke ────────────── */
+.about-squiggle {
+  stroke: #d9d6d0;
+  stroke-width: clamp(8px, 1.15vw, 14px);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* ─── About accent — subtle lavender wash on 1–2 phrases ───── */
+.about-accent {
+  font-weight: 600;
+  color: #2d2d2d;
+  padding: 0 2px;
+  border-radius: 4px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background-image: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(233, 213, 255, 0.6) 35%,
+    rgba(233, 213, 255, 0.6) 65%,
+    transparent 100%
+  );
+}
+
+/* ─── About grid areas (text → stats → photo on mobile;
+       text|photo then full-width stats on desktop) ───────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text"
+    "stats"
+    "photo";
+}
+.about-area-text { grid-area: text; }
+.about-area-photo { grid-area: photo; }
+.about-area-stats { grid-area: stats; }
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1.05fr 1fr;
+    grid-template-areas:
+      "text photo"
+      "stats stats";
+    align-items: center;
+  }
+}
+
+/* ─── Projects card grid ─────────────────────────────────── */
+.project-card-grid {
+  grid-template-areas: "content" "image";
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .project-card-grid {
+    grid-template-areas: "content image";
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+/* Projects section: must remain overflow: visible so sticky viewport can stick */
+.projects-section {
+  overflow: visible;
+}
+.project-sticky-viewport {
+  overflow: hidden;
+}
+
+
+/* GPU-accelerated card transforms */
+.project-stage {
+  transform: translateZ(0);
+}
+
+
+/* ─── Reduced motion ───────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  /* Stack cards vertically, all visible */
+  .project-sticky-viewport {
+    position: relative !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .projects-section {
+    height: auto !important;
+  }
+}
+

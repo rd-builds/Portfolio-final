@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#E9D5FF"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <circle cx="400" cy="380" r="180" fill="#1A1A1A"/>
+  <!-- Stylized bucket hat -->
+  <path d="M 220 300 C 220 200, 580 200, 580 300 Z" fill="#F43F5E"/>
+  <path d="M 180 300 Q 400 320 620 300 L 640 330 Q 400 360 160 330 Z" fill="#E11D48"/>
+  <!-- Face & V-hand sign styling -->
+  <circle cx="340" cy="380" r="15" fill="#FAFAF7"/>
+  <circle cx="460" cy="380" r="15" fill="#FAFAF7"/>
+  <path d="M 350 430 Q 400 470 450 430" stroke="#FAFAF7" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Body/Outfit -->
+  <path d="M 180 1000 C 180 650, 620 650, 620 1000 Z" fill="#1A1A1A"/>
+  <text x="400" y="880" font-family="sans-serif" font-size="32" font-weight="bold" fill="#FAFAF7" text-anchor="middle" letter-spacing="4">RIYA DUGGAL</text>
+  <text x="400" y="930" font-family="sans-serif" font-size="20" fill="#A7F3D0" text-anchor="middle" letter-spacing="2">CSE (AI &amp; FUTURE TECH)</text>
+</svg>

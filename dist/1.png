@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <rect width="100%" height="100%" fill="#FAFAF7"/>
+  <rect x="40" y="40" width="1120" height="720" rx="16" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M 40 40 L 1160 40 L 1160 90 L 40 90 Z" fill="#F3F4F6"/>
+  <circle cx="80" cy="65" r="8" fill="#EF4444"/>
+  <circle cx="105" cy="65" r="8" fill="#F59E0B"/>
+  <circle cx="130" cy="65" r="8" fill="#10B981"/>
+  <rect x="180" y="52" width="600" height="26" rx="13" fill="#E5E7EB"/>
+  <text x="200" y="70" font-family="sans-serif" font-size="13" fill="#6B7280">https://brand-generator.app</text>
+  <!-- Content -->
+  <text x="600" y="240" font-family="sans-serif" font-size="42" font-weight="bold" fill="#1A1A1A" text-anchor="middle">Build Your Brand In Minutes</text>
+  <text x="600" y="290" font-family="sans-serif" font-size="18" fill="#6B7280" text-anchor="middle">Automatically generates modern, responsive brand websites from user inputs.</text>
+  <rect x="350" y="340" width="500" height="50" rx="25" fill="#F3F4F6" stroke="#D1D5DB"/>
+  <text x="380" y="372" font-family="sans-serif" font-size="16" fill="#9CA3AF">Enter your brand name...</text>
+  <rect x="680" y="345" width="160" height="40" rx="20" fill="#E11D48"/>
+  <text x="760" y="370" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Generate Website</text>
+  <!-- Mock preview cards -->
+  <rect x="150" y="440" width="280" height="240" rx="12" fill="#F3E8FF"/>
+  <rect x="460" y="440" width="280" height="240" rx="12" fill="#DBEAFE"/>
+  <rect x="770" y="440" width="280" height="240" rx="12" fill="#D1FAE5"/>
+</svg>
